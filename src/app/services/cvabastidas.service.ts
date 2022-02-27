@@ -45,7 +45,7 @@ export class CvabastidasService {
   }
 
   private CargarExperiencia(){
-    this.http.get('https://cv-tutorial-70504.firebaseio.com/Experiencia.json')
+    this.http.get('https://portafoliosimongil-default-rtdb.firebaseio.com/Experiencia.json')
       .subscribe((resp: any[]) => {
         this.experiencia = resp;
         console.log(resp);
