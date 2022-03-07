@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CvabastidasService } from './cvabastidas.service';
+import { CvsimongilService } from './cvsimongil.service';
 
-describe('CvabastidasService', () => {
-  let service: CvabastidasService;
+describe('CvsimongilService', () => {
+  let service: CvsimongilService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(CvabastidasService);
+    service = TestBed.inject(CvsimongilService);
   });
 
   it('should be created', () => {

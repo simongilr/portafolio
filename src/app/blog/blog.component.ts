@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CvabastidasService } from '../services/cvabastidas.service';
+import { CvsimongilService } from '../services/cvsimongil.service';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
@@ -9,7 +9,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class BlogComponent implements OnInit {
 
-  constructor(public cv: CvabastidasService,
+  constructor(public cv: CvsimongilService,
               private sanitizer: DomSanitizer
               ) { }
 

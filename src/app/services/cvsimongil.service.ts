@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class CvabastidasService {
+export class CvsimongilService {
 
   profesional: any[] = [];
   educacion: any[] = [];
