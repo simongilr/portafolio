@@ -2,8 +2,8 @@
   <div class="anim pulse"><i class="ion-ios-bolt-outline"></i></div>
 </div>
 <div class="preloader-left"></div>
-<div class="inline-menu-container">
-  <span class="status">Estoy disponible</span>
+<div class="inline-menu-container" >
+  <span class="status" *ngFor="let x of cv.status">{{x.status}}</span>
   <ul class="inline-menu">
       <li class="about menu-item">Resumen</li>
       <li class="portfolio menu-item">Portafolio</li>
@@ -18,9 +18,9 @@
   <div class="container">
 
       <div class="name-block">
-          <div class="name-block-container">
-              <h1><span>Hola, Soy</span>Simón Gil</h1>
-              <h2>Analista De Software & Programador BackEnd/FrontEnd</h2>
+          <div class="name-block-container" *ngFor="let perfx of cv.perfil">
+              <h1><span> {{perfx.intro}}</span> {{perfx.nombre}}</h1>
+              <h2>{{perfx.profesion }}</h2>
               <!-- <a target="_blank" href="" class="btn btn-download">Descargar CV</a> -->
               <ul class="social">
                   <li><a href="https://www.linkedin.com/in/simongilr/" target_="_blank"><i class="ion-social-linkedin"></i></a></li>

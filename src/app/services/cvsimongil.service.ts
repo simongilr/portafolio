@@ -11,6 +11,10 @@ export class CvsimongilService {
   testimonio: any[] = [];
   experiencia: any[] = [];
   blog: any[] = [];
+  perfil: any[] = [];
+  status: any[] = [];
+
+
 
   constructor(private http: HttpClient) {
     this.CargarProfesional();
@@ -18,8 +22,25 @@ export class CvsimongilService {
     this.CargarTestimonio();
     this.CargarExperiencia();
     this.CargarBlog();
+    this.CargarPerfil();
+    this.CargarStatus();
   }
 
+  private CargarPerfil(){
+    this.http.get('https://portafoliosimongil-default-rtdb.firebaseio.com/Perfil.json')
+      .subscribe((resp: any[]) => {
+        this.perfil = resp;
+        console.log(resp);
+    });
+  }
+
+  private CargarStatus(){
+    this.http.get('https://portafoliosimongil-default-rtdb.firebaseio.com/status.json')
+      .subscribe((resp: any[]) => {
+        this.status = resp;
+        console.log(resp);
+    });
+  }
   private CargarProfesional(){
     this.http.get('https://portafoliosimongil-default-rtdb.firebaseio.com/Profesional.json')
       .subscribe((resp: any[]) => {
@@ -29,7 +50,7 @@ export class CvsimongilService {
   }
 
   private CargarEducacion(){
-    this.http.get('https://cv-tutorial-70504.firebaseio.com/Educacion.json')
+    this.http.get('https://portafoliosimongil-default-rtdb.firebaseio.com/Educacion.json')
       .subscribe((resp: any[]) => {
         this.educacion = resp;
         console.log(resp);
@@ -37,7 +58,7 @@ export class CvsimongilService {
   }
 
   private CargarTestimonio(){
-    this.http.get('https://cv-tutorial-70504.firebaseio.com/Testimonio.json')
+    this.http.get('https://portafoliosimongil-default-rtdb.firebaseio.com/Testimonio.json')
       .subscribe((resp: any[]) => {
         this.testimonio = resp;
         console.log(resp);

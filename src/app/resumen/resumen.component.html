@@ -1,15 +1,15 @@
   <section class="content" id="about">
-      <div class="block-content">
-          <h3 class="block-title">Perfil</h3>
-          <h3 class="subheading">¡Hola! soy Simón Gil <strong>Analista De Software & Programador BackEnd/FrontEnd</strong></h3>
-          <p>Web Senior con más de 8 años de experiencia. especializada en desarrollo front end y back end. Experimentado con todas las etapas de la ciclo de desarrollo para proyectos web dinámicos. Tener un conocimiento profundo incluyendo HTML5 avanzado, CSS3, HTML5, PHP, JSON, JavaScript, TypeScript, Angular. Fuertes antecedentes en gestión y liderazgo.</p>
-          <div class="info-list row">
-              <div class="col-sm-6"><span>Nombre : </span> Simón Gil</div>
-              <div class="col-sm-6"><span>Fecha de Nacimiento : </span> Mayo, 1991 </div>
-              <div class="col-sm-6"><span>Dirección : </span> Colombia, Medellin, Belen.</div>
-              <div class="col-sm-6"><span>Email : </span> simongilr@gmail.com</div>
-              <div class="col-sm-6"><span>Telefono : </span> + 57 340 341 4244</div>
-              <div class="col-sm-6"><span>Interes : </span>Full-Time</div>
+      <div class="block-content" *ngFor="let perfx of cv.perfil">
+        <h3 class="block-title">Perfil</h3>
+        <h3 class="subheading"> {{ perfx.intro+perfx.nombre }} <br> <strong> {{perfx.profesion}}</strong></h3>
+        <p> {{perfx.descripcion}}</p>
+        <div class="info-list row" >
+            <div class="col-sm-6"><span>Nombre : </span>{{perfx.nombre}} </div>
+            <div class="col-sm-6"><span>Fecha de Nacimiento : </span>{{perfx.fecha}}</div>
+            <div class="col-sm-6"><span>Dirección : </span>{{perfx.direccion}}</div>
+            <div class="col-sm-6"><span>Email : </span>{{perfx.email}}</div>
+            <div class="col-sm-6"><span>Telefono : </span>{{perfx.telefono}}</div>
+            <div class="col-sm-6"><span>Interes : </span>{{perfx.interes}}</div>
           </div>
       </div>
       <div class="block-content">
@@ -52,10 +52,10 @@
                         <div *ngFor="let edux of cv.educacion">
                           <div class="exp">
                               <div class="hgroup">
-                                  <h4>{{ edux.Nombre }} | <a href="{{ edux.Url }}" target="_blank"><span>Ver Certificado</span></a></h4>
-                                  <h5>{{ edux.Fecha }}</h5>
+                                  <h4>{{ edux.nombre }} </h4>
+                                  <h5>{{ edux.fecha }}</h5>
                               </div>
-                              <p>{{ edux.Descripcion }}</p>
+                              <p>{{ edux.descripcion }}</p>
                           </div>
                         </div>
                       </div>
@@ -63,70 +63,7 @@
               </div>
           </div>
       </div>
-      <div class="block-content">
-          <h3 class="block-title">Servicios</h3>
-          <div class="row">
-              <div class="col-md-4 col-sm-6 service">
-                  <div class="service-icon">
-                      <i class="ion-laptop"></i>
-                  </div>
-                  <h4>Diseño Web</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-              </div>
-              <div class="col-md-4 col-sm-6 service">
-                  <div class="service-icon">
-                      <i class="ion-pie-graph"></i>
-                  </div>
-                  <h4>Desarrollo de Aplicaciones</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-              </div>
-              <div class="col-md-4 col-sm-6 service">
-                  <div class="service-icon">
-                      <i class="ion-paintbucket"></i>
-                  </div>
-                  <h4>Diseño Grafico</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-              </div>
-              <div class="col-md-4 col-sm-6 service">
-                  <div class="service-icon">
-                      <i class="ion-printer"></i>
-                  </div>
-                  <h4>Print Design</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-              </div>
-              <div class="col-md-4 col-sm-6 service">
-                  <div class="service-icon">
-                      <i class="ion-qr-scanner"></i>
-                  </div>
-                  <h4>Graphic Design</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-              </div>
-              <div class="col-md-4 col-sm-6 service">
-                  <div class="service-icon">
-                      <i class="ion-social-buffer"></i>
-                  </div>
-                  <h4>Print Design</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-              </div>
-          </div>
-      </div>
-     <!--  <div class="block-content">
-          <h3 class="block-title">Awards</h3>
-          <div class="row">
-              <div class="col-md-3 col-sm-6 awards">
-                  <img src="assets\images\awards\1.jpeg" alt="">
-              </div>
-              <div class="col-md-3 col-sm-6 awards">
-                  <img src="assets\images\awards\2.jpeg" alt="">
-              </div>
-              <div class="col-md-3 col-sm-6 awards">
-                  <img src="assets\images\awards\3.jpeg" alt="">
-              </div>
-              <div class="col-md-3 col-sm-6 awards">
-                  <img src="assets\images\awards\4.jpeg" alt="">
-              </div>
-          </div>
-      </div> -->
+    
       <div class="block-content">
           <h3 class="block-title">Testimonios</h3>
           <div class="row">
