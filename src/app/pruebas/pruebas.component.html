@@ -1,0 +1,29 @@
+
+<button class="btn v7" (click)="register()">Registro</button>
+<button class="btn v7" (click)="record()">Registrados</button>
+
+<ng-container *ngIf="registerAct">
+    <div class="block-content" >
+        <div class="info-list row" >
+            <div class="col-sm-6"><span class="col-sm-6">Nombre:</span></div><input [(ngModel)]="body.name" class="form-control" type="text" placeholder="Nombre">
+            <div class="col-sm-6"><span>Apellido:</span></div><input type="text" [(ngModel)]="body.lastName" class="form-control" placeholder="Apellido">
+            <div class="col-sm-6"><span>Email:</span></div><input type="email" [(ngModel)]="body.email" class="form-control" placeholder="Email">
+            <div class="col-sm-6"><span>Teléfono:</span></div><input type="text" [(ngModel)]="body.phone" class="form-control" placeholder="Teléfono">
+            <div class="col-sm-6"><span>Ciudad:</span></div><input type="text" [(ngModel)]="body.city" class="form-control" placeholder="Ciudad">
+            <div class="col-sm-6"><span>País:</span></div><input type="text" [(ngModel)]="body.country"class="form-control" placeholder="País">
+        </div>
+        <button class="btn v7" (click)="addNewUser()">Guardar</button>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="recordAct">
+    <div class="block-content" *ngFor="let user of users" >
+        <div class="col-sm-6"><span>Nombre: </span>{{user.name}} </div>
+        <div class="col-sm-6"><span>Apellido: </span>{{user.lastName}} </div>
+        <div class="col-sm-6"><span>Email: </span>{{user.email}} </div>
+        <div class="col-sm-6"><span>Teléfono: </span>{{user.phone}} </div>
+        <div class="col-sm-6"><span>Ciudad: </span>{{user.city}} </div>
+        <div class="col-sm-6"><span>País: </span>{{user.country}} </div>
+    </div>
+</ng-container> 
+
